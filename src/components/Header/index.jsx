@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './styles.css'
+import logo from '../../assets/logo.svg'
 import {LuMenu} from 'react-icons/lu'
 export default function Header(){
     const [isHidden,setIsHidden]= useState('hide')
@@ -10,7 +11,7 @@ export default function Header(){
     return(
         <header>
             <div className="container">
-            <img src="src/assets/logo.svg"/>
+            <img src={logo}/>
             <nav>
                <ul className={`menu ${isHidden}`}>
                 <li>

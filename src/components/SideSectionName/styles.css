@@ -1,5 +1,6 @@
 .SectionTitle{
     display: flex;
+    justify-content: end;
     flex-direction: column;
     align-items: center;
     grid-area: rightContent;
@@ -7,14 +8,14 @@
 
 .asideLine{
     width: 1px;
-    height: 100%;
+    height: 10%;
     background: rgba(255, 255, 255, 0.178);
 }
 .asideTitle{
     font-size: clamp(2rem,5vw,3rem);
     text-transform: uppercase;
     transform: rotate(90deg);
-    margin-block: 5rem;
+    margin-block: clamp(4rem,3vw,5rem);
 }
 .asideButton{
     border-radius: 100%;
