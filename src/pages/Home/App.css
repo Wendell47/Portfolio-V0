@@ -1,22 +1,21 @@
 #root {
   display: flex;
   justify-content: center;
-  height: 100vh;
-  padding: clamp(2rem, 4vw, 4rem);
 }
 
 body{
-  font-size: 1.6rem;
+  font-size: clamp(1.2rem, 3vw,1.6rem);
 }
 .gridTemplate{
   display: grid;
-  grid-template-columns: 2rem 1fr 2rem;
+  height: calc(var(--vh, 1vh) * 100);
+  padding: clamp(1rem, 3vw, 4rem);
+  grid-template-columns: 3rem 1fr 3rem;
   grid-template-rows: 4rem 1fr ;
   grid-template-areas: 
   "header header header"
   "leftContent mainContent rightContent"
   ;
-  height: -webkit-fill-available;
 }
 .header{
   grid-area: header;
@@ -87,7 +86,7 @@ aside{
   scroll-snap-align: center;
   display: flex;
   align-items: center;
-  padding: clamp(2rem,4vw,4rem);
+  padding: clamp(1rem,4vw,4rem);
 }
 
 .animation {
@@ -141,6 +140,12 @@ aside{
   }
   .grid > div{
     width: 100%;
+  }
+  .maskTop{
+    height: 5rem;
+    top: 0;
+    background-position-y: top;
+    -webkit-mask-image: linear-gradient(rgb(0 0 0)83%, transparent);
   }
 }
 @keyframes appearHero {

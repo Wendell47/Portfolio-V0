@@ -5,9 +5,24 @@ import SideSectionName from '../../components/SideSectionName'
 import SideSectionSocial from '../../components/SideSectionSocial'
 import './App.css'
 import img from '../../assets/img-test.webp'
+import { useEffect } from 'react'
+import { useState } from 'react'
 
   function App() {
-    
+    // Primeiro, obtenha a altura da janela do usuário
+    const [resized,setResided] =useState(window.innerHeight * 0.01)
+    function Resize(){
+      const size =window.innerHeight * 0.01
+      setResided(size)
+    }
+  
+    document.documentElement.style.setProperty('--vh', `${resized}px`);
+    window.onresize = Resize
+    useEffect(() =>{
+
+    document.documentElement.style.setProperty('--vh', `${resized}px`);
+  },[resized])
+
   return (
     <>
     <div className='maskBackground maskTop'></div>
