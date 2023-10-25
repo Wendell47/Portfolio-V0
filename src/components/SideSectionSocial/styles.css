@@ -1,0 +1,11 @@
+.SectionSocial,.asideSocialIcons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: leftContent;
+}
+.SectionSocial{
+height: 100%;
+justify-content: flex-end;
+font-size: 2.5rem;
+}

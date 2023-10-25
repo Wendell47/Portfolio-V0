@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@400;500;700&display=swap');
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+ 
+:root {
+  font-family: 'Exo', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 62.5%;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  --background-theme: url('../assets/bg-wallpaper.webp'),#242424;
+  --background-color-theme:#111413;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+body{
+  background:  var(--background-theme);
+  background-size: cover;
+  background-position: center;
+}
+button{
+  all: unset;
+  cursor: pointer;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}

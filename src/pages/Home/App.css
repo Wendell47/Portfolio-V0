@@ -1,0 +1,194 @@
+#root {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  padding: 2rem;
+}
+
+body{
+  font-size: 1.6rem;
+}
+.gridTemplate{
+  display: grid;
+  grid-template-columns: 3rem 1fr 3rem;
+  grid-template-rows: 8rem 1fr ;
+  grid-template-areas: 
+  "header header header"
+  "leftContent mainContent rightContent"
+  
+  ;
+  height: -webkit-fill-available;
+}
+.header{
+  grid-area: header;
+}
+.container{
+  width: 100%;
+  max-width: 1980px;
+}
+
+#hero{
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+.hero h1{
+  text-transform: uppercase;
+  font-size: clamp(4rem, 5vw, 9rem);
+}
+.hero span{
+  font-size: clamp(0.8rem, 5vw, 2rem);
+}
+.hero h2{
+  font-weight: 400;
+  font-size: clamp(0.5rem, 5vw, 1.8rem);
+}
+
+aside{
+  z-index: 20;
+}
+.maskBackground{
+  position: absolute;
+  z-index: 10;
+  inset-inline: 0;
+  width: 100%;
+  mask-type: alpha;
+  -webkit-mask-position:center;
+  -webkit-mask-size:cover;
+  -webkit-mask-repeat:no-repeat;
+  background-image:  url('../../assets/bg-wallpaper.webp');
+  background-position-x: center;
+}
+.maskTop{
+  height: 12rem;
+  top: 0;
+  background-position-y: top;
+  -webkit-mask-image: linear-gradient(rgb(0 0 0)83%, transparent);
+}
+.maskBottom{
+  height: 4rem;
+  background-position-y: bottom;
+  bottom: 0;
+  -webkit-mask-image: linear-gradient(transparent, rgb(0 0 0)51% );
+}
+.main_content{
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden ;
+  scroll-timeline: --myScroller ;
+  scroll-behavior: smooth;
+  grid-area: mainContent;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+
+.content{
+  height: 100%;
+  scroll-snap-align: center;
+  display: flex;
+  align-items: center;
+  padding: 4rem;
+}
+
+.animation {
+  animation-timeline: --myScroller;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1ms; /* Firefox requires this to apply the animation */
+}
+.animationHero {
+  animation-name: appearHero;
+}
+.animation1 {
+  animation-name: appear;
+}
+.animation2 {
+  animation-name: appear2;
+}
+.animation3 {
+  animation-name: appear3;
+}
+
+.grid{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  width: -webkit-fill-available;
+  opacity: 0;
+}
+.grid > div {
+  flex: 1 auto;
+  width: 45%;
+}
+.title{
+  width: 100%;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.card img{
+  width: 100%;
+  transition: 140ms ease;
+}
+.card:hover img {
+  scale: 1.03;
+}
+@media (max-width: 767px) {
+  .grid {
+    flex-direction: column;
+  }
+  .grid > div{
+    width: 100%;
+  }
+}
+@keyframes appearHero {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50%{
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  33%{
+    opacity: 1;
+    transform: scale(1);
+  }
+  70%{
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+@keyframes appear2 {
+ 
+  30%{opacity: 0;
+      transform: scale(0.8);
+  }
+  70% {
+    opacity: 1;
+   transform: scale(1);
+  }
+  100%{
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+@keyframes appear3 {
+ 
+  60%{opacity: 0;
+      transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+   transform: scale(1);
+  }
+}

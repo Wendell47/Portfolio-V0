@@ -1,0 +1,24 @@
+.SectionTitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: rightContent;
+}
+
+.asideLine{
+    width: 1px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.178);
+}
+.asideTitle{
+    font-size: clamp(3rem,5vw,3rem);
+    text-transform: uppercase;
+    transform: rotate(90deg);
+    margin-block: 5rem;
+}
+.asideButton{
+    border-radius: 100%;
+    padding: 1rem;
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.178);
+}
