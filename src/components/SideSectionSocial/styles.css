@@ -7,5 +7,5 @@
 .SectionSocial{
 height: 100%;
 justify-content: flex-end;
-font-size: 2.5rem;
+font-size: clamp(2rem,4vw,2.5rem);
 }
