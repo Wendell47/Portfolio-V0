@@ -31,11 +31,21 @@ body{
   place-content: center;
   text-align: center;
 }
+.hero {
+  justify-self: center;
+  max-width: 800px;
+
+}
 .hero h1{
   text-transform: uppercase;
-  font-size: clamp(4rem, 5vw, 9rem);
+  line-height: 100%;
+  font-size: clamp(3rem, 5vw, 6rem);
+  margin-block:2rem ;
 }
-.hero span{
+.hero h1 span{
+  color: #8300FF;
+}
+.hero > span{
   font-size: clamp(0.8rem, 5vw, 2rem);
 }
 .hero h2{
@@ -60,16 +70,16 @@ aside{
   background-size: auto;
 }
 .maskTop{
-  height: 12rem;
+  height: clamp(10rem,6vw,12rem);
   top: 0;
   background-position-y: top;
   -webkit-mask-image: linear-gradient(rgb(0 0 0)83%, transparent);
 }
 .maskBottom{
-  height: 4rem;
+  height: 6rem;
   background-position-y: bottom;
   bottom: 0;
-  -webkit-mask-image: linear-gradient(transparent, rgb(0 0 0)51% );
+  -webkit-mask-image: linear-gradient(transparent, rgb(0 0 0)30% );
 }
 .main_content{
   scroll-snap-type: y mandatory;
@@ -77,18 +87,14 @@ aside{
   scroll-timeline: --myScroller ;
   scroll-behavior: smooth;
   grid-area: mainContent;
+  max-width: 1400px;
+  justify-self: center;
 }
 ::-webkit-scrollbar{
   display: none;
 }
 
-.content{
-  height: 100%;
-  scroll-snap-align: center;
-  display: flex;
-  align-items: center;
-  padding: clamp(1rem,4vw,4rem);
-}
+
 
 .animation {
   animation-timeline: --myScroller;
@@ -109,49 +115,18 @@ aside{
   animation-name: appear3;
 }
 
-.grid{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  width: -webkit-fill-available;
-  opacity: 0;
-}
-.grid > div {
-  flex: 1 auto;
-  width: 45%;
-}
-.title{
-  width: 100%;
-}
-.card{
-  display: flex;
-  flex-direction: column;
-  gap: clamp(1rem,3vw,2rem);
-}
-.card img{
-  width: 100%;
-  object-fit: cover;
-  transition: 140ms ease;
-}
-.card:hover img {
-  scale: 1.03;
-}
-@media (max-width: 767px) {
-  .grid {
-    flex-direction: column;
-  }
-  .card img{
-    height: 12rem;
-  }
-  .grid > div{
-    width: 100%;
-  }
+
+@media (max-width: 800px) {
   .maskTop{
-    height: 5rem;
+    height: 7rem;
     top: 0;
     background-position-y: top;
     -webkit-mask-image: linear-gradient(rgb(0 0 0)83%, transparent);
   }
+  .maskBottom{
+    height: 3rem;
+  }
+
 }
 @keyframes appearHero {
   0% {

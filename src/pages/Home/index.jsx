@@ -4,9 +4,14 @@ import Header from '../../components/Header'
 import SideSectionName from '../../components/SideSectionName'
 import SideSectionSocial from '../../components/SideSectionSocial'
 import './App.css'
+import bin from '../../assets/con-binario.webp'
+import cripto from '../../assets/cripto.webp'
+import caffeine from '../../assets/caffeinenotes.webp'
 import img from '../../assets/img-test.webp'
 import { useEffect } from 'react'
 import { useState } from 'react'
+import Section from '../../components/Section'
+import Card from '../../components/Card'
 
   function App() {
     // Primeiro, obtenha a altura da janela do usuário
@@ -33,98 +38,87 @@ import { useState } from 'react'
    <main className='main_content'  id='main_content'>
         <section className='content' id='hero'>
            <div className='hero animation animationHero'>
-            <span>Olá 👋</span>
-            <h1>Sou Wendel.</h1>
-            <h2>Um designer/desenvolvedor front-end apaixonado por designer modernos e bonitos. </h2>
+            <span>Hello 👋</span>
+            <h1>I'm a Designer/Front-End <span>Developer.</span> </h1>
+            <h2>Eu trabalho com desenvolvimento front-end, gosto de designs modernos e futuristas e sou apaixonado por design gráfico e artes vetoriais.</h2>
            </div>
         </section>
-        <section className='content' id='projects'>
-            <div className='grid animation animation1'>
-               <section className='title'>
-                <h3>Projetos</h3>
-                <p>veja alguns dos meus projeto já realizados.</p>
-               </section>
-
-                  <div>
-                    <div className='card'>
-                      <img src={img} alt="" />
-                      <section>
-                        <h4>Cripy</h4>
-                        <p>uma aplicação web que faz criptografia e descriptografia de mensagem.</p>
-                      </section>
-                    </div>
-                  </div>
-                  <div>
-                    <div className='card'>
-                      <img src={img} alt="" />
-                      <section>
-                        <h4>Cripy</h4>
-                        <p>uma aplicação web que faz criptografia e descriptografia de mensagem.</p>
-                      </section>
-                    </div>
-                  </div>
-               
-            </div>
+        <Section
+          title='Projetos'
+          description='Veja alguns dos meus projeto.'
+          SectionId='projects'
+          animationName='animation1'
+          >
+          
+            <Card
+              img={cripto}
+              title='Cripto'
+              description='uma aplicação web que faz criptografia e descriptografia de mensagem.'
+              cardBackgroundColor="#A97979"
+              urlProject='#'
+              urlGithub='#'
+              gridColum='1'
+              gridRow='2/4'
+            />
             
-        </section>
-        <section className='content' id='about'>
-            <div className='grid animation animation2'>
-               <section className='title'>
-                <h3>Projetos</h3>
-                <p>veja alguns dos meus projeto já realizados.</p>
-               </section>
-
-                  <div>
-                    <div className='card'>
-                      <img src={img} alt="" />
-                      <section>
-                        <h4>Cripy</h4>
-                        <p>uma aplicação web que faz criptografia e descriptografia de mensagem.</p>
-                      </section>
-                    </div>
-                  </div>
-                  <div>
-                    <div className='card'>
-                      <img src={img} alt="" />
-                      <section>
-                        <h4>Cripy</h4>
-                        <p>uma aplicação web que faz criptografia e descriptografia de mensagem.</p>
-                      </section>
-                    </div>
-                  </div>
-               
-            </div>
+            <Card
+              img={bin}
+              title='Cripto'
+              description='uma aplicação web para conversão de número decimal em binário.'
+              cardBackgroundColor="#F9F9F9"
+              urlProject='#'
+              urlGithub='#'
+            />
+            <Card
+              img={caffeine}
+              title='Caffeine Notes - figma'
+              description='Protótipo de uma aplicação web registro de notas.'
+              cardBackgroundColor="#F8F6F1"
+              urlFigma='#'
+            />
             
-        </section>
-        <section className='content' id='about'>
-            <div className='grid animation animation3'>
-               <section className='title'>
-                <h3>Projetos</h3>
-                <p>veja alguns dos meus projeto já realizados.</p>
-               </section>
 
-                  <div>
-                    <div className='card'>
-                      <img src={img} alt="" />
-                      <section>
-                        <h4>Cripy</h4>
-                        <p>uma aplicação web que faz criptografia e descriptografia de mensagem.</p>
-                      </section>
-                    </div>
-                  </div>
-                  <div>
-                    <div className='card'>
-                      <img src={img} alt="" />
-                      <section>
-                        <h4>Cripy</h4>
-                        <p>uma aplicação web que faz criptografia e descriptografia de mensagem.</p>
-                      </section>
-                    </div>
-                  </div>
-               
+        </Section>
+        <Section
+          title='Sobre mim'
+          description=''
+          SectionId='about'
+          animationName='animation2'
+          >
+           
+              <img src={img} alt="" />
+         
+            <div>
+            <h4>Eu tenho aperfeiçoado e praticado programação por 2 anos</h4>
+              <p>
+                A im a dev junior that love make good designs 
+                and imerge in the world of tecnlogy, searching
+                learn more and more and keep makeing better.
+
+                I have made some courses in the area, that give 
+                to me a big knology about web developer and
+                make me more pasion for this.
+              </p>
             </div>
+          </Section>
+        <Section
+          title='Contato'
+          description=''
+          SectionId='about'
+          animationName='animation3'
+          >
             
-        </section>
+            <div>
+            <h4>Vamos nos conectar, você pode me encontar no linkeInd.</h4>
+              <p>
+               
+              </p>
+            </div>
+           
+              <img src={img} alt="" />
+           
+          </Section>
+
    </main>
    <SideSectionSocial/>
    <SideSectionName/>

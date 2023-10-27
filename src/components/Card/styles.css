@@ -1,0 +1,81 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem,3vw,2rem);
+    border-radius: 3rem;
+    position: relative;
+    font-size: 1.4rem;
+    overflow: hidden;
+    color: black;
+    justify-content: flex-start;
+  }
+.card h4{
+    font-size: 2rem;
+}
+.card img{
+width: 100%;
+object-fit: cover;
+transition: 140ms ease;
+transform: translate(clamp(15rem,11vw,21rem) ,clamp(-21rem, 5vw,2rem));
+}
+.cardButtons{
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+}
+.card button{
+    background-color: black;
+    display: flex;
+    padding: 1rem;
+    font-size: 2rem;
+    color: white;
+    border-radius: 100%;
+}
+.card:hover img {
+scale: 1.03;
+}
+.card section,.topContent{
+    display: flex;
+    justify-content: space-between;
+}
+.card section{
+    position: absolute;
+    flex-direction: column;
+    inset: 0;
+    padding: 2rem;
+}
+.topContent > div:first-child{
+max-width: 70%;
+}
+.tagsWrapper{
+    display: flex;
+    gap: 1rem;
+}
+.tag{
+    padding: .4rem 1.2rem;
+    border-radius: 2rem;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+@media (max-width: 767px) {
+.grid > div {
+    grid-row: auto !important;
+    grid-column: 1/3 !important;
+  }
+
+}
+
+@media (max-width: 1174px) {
+    
+.grid > div:first-of-type {
+    grid-row: 2/2 !important;
+    
+  }
+.grid > div:last-of-type {
+    grid-column: 1/3 !important;
+  }
+
+}
