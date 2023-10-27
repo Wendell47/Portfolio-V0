@@ -57,7 +57,7 @@ aside{
   z-index: 20;
 }
 .maskBackground{
-  position: absolute;
+  position: fixed;
   z-index: 10;
   inset-inline: 0;
   width: 100%;
@@ -127,6 +127,14 @@ aside{
     height: 3rem;
   }
 
+}
+@media (max-width: 768px) {
+  .gridTemplate{
+    grid-template-areas: 
+    "header header header"
+    "mainContent mainContent mainContent"
+    ;
+  }
 }
 @keyframes appearHero {
   0% {

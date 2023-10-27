@@ -12,6 +12,12 @@
 .card h4{
     font-size: 2rem;
 }
+.card p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+}
 .card img{
 width: 100%;
 object-fit: cover;
