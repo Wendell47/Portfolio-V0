@@ -65,7 +65,7 @@ aside{
   -webkit-mask-position:center;
   -webkit-mask-size:cover;
   -webkit-mask-repeat:no-repeat;
-  background-image:  url('../../assets/bg-wallpaper.webp');
+  background-image: var(--background-theme);
   background-position-x: center;
   background-size: auto;
 }
@@ -135,6 +135,9 @@ aside{
     "mainContent mainContent mainContent"
     ;
   }
+  .content{
+    padding-inline: 0 !important;
+  }
 }
 @keyframes appearHero {
   0% {
@@ -166,7 +169,7 @@ aside{
   30%{opacity: 0;
       transform: scale(0.8);
   }
-  70% {
+  63.4% {
     opacity: 1;
    transform: scale(1);
   }

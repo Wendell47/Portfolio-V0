@@ -13,7 +13,7 @@
   font-size: 62.5%;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  --background-theme: url('../assets/bg-wallpaper.webp'),#242424;
+  --background-theme: url('../assets/bg-wallpaper.webp');
   --background-color-theme:#111413;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -30,6 +30,7 @@ a{
 }
 
 body{
+  background: var(--background-color-theme);
   background:  var(--background-theme);
   background-size: cover;
   background-position: center;
@@ -40,8 +41,12 @@ button{
 }
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #000000;
+    --background-theme: url('../assets/bg-wallpaper-white.webp');
+    --background-color-theme:#dddddd;
+  }
+  body{
+    background-blend-mode: screen;
   }
   a:hover {
     color: #747bff;

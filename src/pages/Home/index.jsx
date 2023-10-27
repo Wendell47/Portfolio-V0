@@ -39,7 +39,7 @@ import Card from '../../components/Card'
         <section className='content' id='hero'>
            <div className='hero animation animationHero'>
             <span>Hello 👋</span>
-            <h1>I'm a Designer/Front-End <span>Developer.</span> </h1>
+            <h1> I'm a Designer/Front-End <span>Developer.</span> </h1>
             <h2>Eu trabalho com desenvolvimento front-end, gosto de designs modernos e futuristas e sou apaixonado por design gráfico e artes vetoriais.</h2>
            </div>
         </section>
